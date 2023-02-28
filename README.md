@@ -59,15 +59,15 @@ CSS offers a lot of features to design and customize text for websites.
 
 ### Select fonts with `font-family`
 
-    ```
-     body { font-family: Arial;}
-    ```
+   ```
+    body { font-family: Arial;}
+   ```
 
 This puts the *Arial* font between `<body>` and `</body>`. I.e. the whole HTML document uses the font *Arial*. In order to be able to use this font, it must be installed locally on the visitor's system (*Arial* is installed on most computers). However, it is also possible to offer alternative fonts, separated by a comma (*font-stack*).
 
-    ```
-     body { font-family: Arial, Calibri, sans-serif; }
-    ```
+   ```
+    body { font-family: Arial, Calibri, sans-serif; }
+   ```
 
 If no font is installed on the computer, the default font of the web browser is used. If a font contains a space, then it must be indicated by quotation marks e.g. `"Courier New"`. To be on the safe side, it is recommended to specify a generic font (e.g. `sans-serif`) at the end.
 
@@ -102,26 +102,26 @@ Overview of generic fonts
  ![Preview](7_StylingWithCSS/images/Preview_7_1.JPG)
 
 
-#### Analyze font in web browser
+Analyze font in web browser
  ![Preview](7_StylingWithCSS/images/WebbrowserFonts.PNG)
 
 
 ### Display fonts with web fonts `@font-face`
 With `@font-face` it is possible to use fonts that are not installed on the user's computer. The disadvantage is that the loading time is extended.
 
-    ```
-     @font-face { 
+   ```
+    @font-face { 
         font-family: Arial;
         src: url('path/to/font.ttf') format('truetype');
-        }
-    ```
+    }
+   ```
 
 ### Embed license-free fonts from Google into the website
 The fonts from Google Fonts can be found at [Google Fonts](https://fonts.google.com/).
 
  example --> *7_StylingWithCSS/Part_2/style.css*
 
-    ```
+   ```
     @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
     body {
         font-family: 'Roboto', sans-serif;
@@ -133,12 +133,12 @@ The fonts from Google Fonts can be found at [Google Fonts](https://fonts.google.
         padding: 2% 2%;
         text-align: center;
     }
-    ```
+   ```
 
  ![Preview](7_StylingWithCSS/images/Preview_7_2.JPG)
 
 
-#### Other license-free and commercial providers of web fonts
+Other license-free and commercial providers of web fonts
 - [FontLibrary](http://fontlibrary.org)
 - [FontsForWeb](http://fontsforweb.com)
 
@@ -148,33 +148,33 @@ There are several providers of icon fonts, one of the most popular is [Font Awes
 
 First, the CSS file must be included in the HTML document.
 
-    ```
+   ```
     <link href="styles/all.css" rel="stylesheet">
-    ```
+   ```
 
 Now the font symbols from Font Awesome can be used in the HTML document with the tag `<i>`.
 
-    ```
+   ```
     <i class="fas fa-home"></i>
-    ```
+   ```
 
 The font size can be adjusted with `font-size`.
 
-    ```
+   ```
     <i class="fas fa-home" style="font-size:3em;"></i>
-    ```
+   ```
 
 Colors can be changed with `color`.
 
-    ```
+   ```
     <i class="fas fa-home" style="color:blue;"></i>
-    ```
+   ```
 
 Font Awesome's font icons have special classes that can be used to adjust the icon size with `fa-2x`, `fa-3x`, `fa-4x` and `fa-5x` relative to their container.
 
-    ```
+   ```
     <i class="fas fa-home fa-2x"></i>
-    ```
+   ```
 
 For symbols with a trademark, the prefix `fab` must be used instead of `fas`. The `b` stands for brand, the `s` in `fas` for solid. 
 
@@ -191,7 +191,124 @@ There are other providers besides Font Awesome:
 - [Entypo](http://www.entypo.com)
 
 
-!Note!: Many of these iconfonts and fonts are free, but still have some kind of license , which should be read through before using them on the website.
+!Note!: Many of these icons and fonts are free, but still have some kind of license , which should be read through before using them on the website.
+
+
+### Set font size with `font-size`
+
+#### Keywords for font size
+CSS provides predefined font size keywords such as `small`, `x-small`, `xx-small`, `medium` (base font size), `large`, `x-large` and `xx-large`. These are absolute values. There are also the keywords `smaller` and `larger`, which are relative values (relative to the parent element). They are rarely used, because the actual font size can only be controlled to a limited extent.
+
+
+#### Relative font sizes with `em`.
+An easy way to adjust the font size for the whole document is to set `font-size` for the *body* element. If `font-size: 1em;` (1em = 100%) is set, the default value of the web browser is used. 
+The fact that a relative font size of the *body* element controls the font size for the elements of the web page through inheritance, this option is popular in practice. But it is exactly this inheritance that can make adjusting font sizes a bit more complex if not taken care of.
+ example --> *7_StylingWithCSS/Part_4/styleA.css*
+
+   ```
+    body {
+        font-family: Arial, Verdana, Helvetica, sans-serif;
+        font-size: 0.95em;
+        /* or 95% */
+    }
+
+    footer, header {
+        background-color: palegreen;
+        border: 1px solid black;
+        padding: 2% 2%;
+        text-align: center;
+    }
+
+    article {
+        font-family: Georgia, Times, serif;
+        font-size: 0.8em;
+        /* or 80% */
+    }
+
+    p {
+        font-size: 0.8em;
+        /* or 80% */
+    }
+   ```
+
+ ![Preview](7_StylingWithCSS/images/Preview_7_4A.JPG)
+
+
+#### Set font size with `rem`
+The problem with inheritance of relative values that have with font size with `em` no longer occurs with `rem` (=root em). Since it inherits to the highest root element `<html>` instead of the font size of the corresponding parent element.
+ example --> *7_StylingWithCSS/Part_4/styleB.css*
+
+   ```
+    html { 
+        font-size: 100%; 
+    }
+
+    body { 
+        font-family: Arial, Verdana, Helvetica, sans-serif;
+        font-size: 0.9375rem;
+    }
+
+    footer, header {
+        background-color: palegreen;
+        border: 1px solid black;
+        padding: 2% 2%;
+        text-align:center;
+    }
+
+    article {
+        font-family: Georgia, Times, serif;
+        font-size: 0.8125rem;  
+    }
+
+    p { 
+        font-size: 0.8125rem; 
+    }
+   ```
+
+ ![Preview](7_StylingWithCSS/images/Preview_7_4B.JPG)
+
+
+#### Fixed values with `px` and `pt`
+With `px` (pixel) you have full control over the text size. Due to the different screen sizes and resolutions, however, e.g. 16px do not look the same everywhere. I.e. with a higher pixel density on an inch the pixels inevitably becomes smaller.
+The unit `pt` (point) is more suitable for printing, if a print version is created with CSS.
+
+
+#### the responsive units `vw` and `vh`
+The *viewport units* with `vw` (view width) and `vh` (view height), are relative to the screen dimensions. This assigns a size to an element, which is calculated in relation to the width and height of the viewport. `1vw` corresponds to 1% of the width of the viewport, exactly the same applies to `vh` (corresponds to 1% of the height of the viewport).
+Additionally there are the units `vmin` and `vmax`, which refer to the height or width and use the smaller or larger value.
+ example --> *7_StylingWithCSS/Part_4/styleD.css*
+
+   ```
+    html { 
+        font-size: calc(100% + 0.5vw); 
+    }
+
+    body { 
+        font-family: Arial, Verdana, Helvetica, sans-serif;
+    }
+
+    footer, header {
+        background-color: palegreen;
+        border: 1px solid black;
+        padding: 2% 2%;
+        text-align:center;
+    }       
+
+    article {
+        font-family: Georgia, Times, serif;
+    }
+
+    h1 { 
+        font-size: 2em; 
+    }
+   ```
+
+ ![Preview](7_StylingWithCSS/images/Preview_7_4D.JPG)
+
+
+### Italic and bold fonts with `font-style` and `font-weight`
+
+
 
 
 

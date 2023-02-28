@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    font-size: 0.95em;
+    /* or 95% */
+}
+
+footer, header {
+    background-color: palegreen;
+    border: 1px solid black;
+    padding: 2% 2%;
+    text-align: center;
+}
+
+article {
+    font-family: Georgia, Times, serif;
+    font-size: 0.8em;
+    /* or 80% */
+}
+
+p {
+    font-size: 0.8em;
+    /* or 80% */
+}
