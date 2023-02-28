@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.footer, .header {
+    padding: 1em;
+    text-align: center;
+    background-color: limegreen;
+}
+
+.footer {
+    background-color: white;
+}
+
+nav {
+    text-align: center;
+    padding: 1em;
+    background-color: palegreen;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    padding: 0 1em;
+}

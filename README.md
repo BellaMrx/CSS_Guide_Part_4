@@ -119,6 +119,8 @@ With `@font-face` it is possible to use fonts that are not installed on the user
 ### Embed license-free fonts from Google into the website
 The fonts from Google Fonts can be found at [Google Fonts](https://fonts.google.com/).
 
+ example --> *7_StylingWithCSS/Part_2/style.css*
+
     ```
     @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
     body {
@@ -142,6 +144,58 @@ The fonts from Google Fonts can be found at [Google Fonts](https://fonts.google.
 
 
 ### Use symbols with icon fonts
+There are several providers of icon fonts, one of the most popular is [Font Awesome](https://fontawesome.com/). There you can find a lot of icons that are needed for a website.
+
+First, the CSS file must be included in the HTML document.
+
+    ```
+    <link href="styles/all.css" rel="stylesheet">
+    ```
+
+Now the font symbols from Font Awesome can be used in the HTML document with the tag `<i>`.
+
+    ```
+    <i class="fas fa-home"></i>
+    ```
+
+The font size can be adjusted with `font-size`.
+
+    ```
+    <i class="fas fa-home" style="font-size:3em;"></i>
+    ```
+
+Colors can be changed with `color`.
+
+    ```
+    <i class="fas fa-home" style="color:blue;"></i>
+    ```
+
+Font Awesome's font icons have special classes that can be used to adjust the icon size with `fa-2x`, `fa-3x`, `fa-4x` and `fa-5x` relative to their container.
+
+    ```
+    <i class="fas fa-home fa-2x"></i>
+    ```
+
+For symbols with a trademark, the prefix `fab` must be used instead of `fas`. The `b` stands for brand, the `s` in `fas` for solid. 
+
+An overview of Font Awesome's symbols can be found at [Font Awesome - Gallery](https://fontawesome.com/icons?d=gallery). Other interesting information about Font Awesome can be found here [Font Awesome - How to use](https://fontawesome.com/how-to-use/web-fonts-with-css).
+
+ example --> *7_StylingWithCSS/Part_3*
+
+ ![Preview](7_StylingWithCSS/images/Preview_7_3.JPG)
+
+There are other providers besides Font Awesome:
+- [Genericons](http://genericons.com)
+- [Icomoon](http://icomoon.io)
+- [Fontello](http://fontello.com)
+- [Entypo](http://www.entypo.com)
+
+
+!Note!: Many of these iconfonts and fonts are free, but still have some kind of license , which should be read through before using them on the website.
+
+
+
+
 
 
 
