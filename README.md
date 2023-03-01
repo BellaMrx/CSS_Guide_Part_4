@@ -44,6 +44,7 @@ The code examples in the guide can be found in the listed folders.
 ### CSS Guide Part IV
 7. Styling with CSS
     - 7.1. Text design with CSS
+    - 7.2. Design lists with CSS
 8. Testing and organizing
 
 
@@ -125,13 +126,6 @@ The fonts from Google Fonts can be found at [Google Fonts](https://fonts.google.
     @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
     body {
         font-family: 'Roboto', sans-serif;
-    }
-
-    .footer, .header {
-        background-color: lightyellow;
-        border: 1px solid black;
-        padding: 2% 2%;
-        text-align: center;
     }
    ```
 
@@ -282,25 +276,6 @@ Additionally there are the units `vmin` and `vmax`, which refer to the height or
     html { 
         font-size: calc(100% + 0.5vw); 
     }
-
-    body { 
-        font-family: Arial, Verdana, Helvetica, sans-serif;
-    }
-
-    footer, header {
-        background-color: palegreen;
-        border: 1px solid black;
-        padding: 2% 2%;
-        text-align:center;
-    }       
-
-    article {
-        font-family: Georgia, Times, serif;
-    }
-
-    h1 { 
-        font-size: 2em; 
-    }
    ```
 
  ![Preview](7_StylingWithCSS/images/Preview_7_4D.JPG)
@@ -314,24 +289,6 @@ The CSS property `font-weight` can be used to define the thickness of the font. 
  example --> *7_StylingWithCSS/Part_5/styles/style.css*
 
    ```
-    body {
-        font-family: Arial, Verdana, Helvetica, sans-serif;
-        font-size: 62.5%;
-    }
-
-    footer, header {
-        background-color: palegreen;
-        border: 1px solid black;
-        padding: 2%;
-        text-align: center;
-        font-size: 2.0em;
-    }
-
-    article {
-        font-family: Georgia, Times, serif;
-        font-size: 1.8em;
-    }
-
     .italic {
         font-style: italic;
     }
@@ -362,24 +319,6 @@ With `font-variant` and the value `small-caps` the text will be converted to all
  example --> *7_StylingWithCSS/Part_6/styles/style.css*
 
    ```
-    body { 
-        font-family: Arial, Verdana, Helvetica, sans-serif;
-        font-size: 62.5%;
-    }
-
-    footer, header {
-        background-color: palegreen;
-        border: 1px solid black;
-        padding: 2%;
-        text-align:center;
-        font-size: 2.0em;
-    }    
-
-    article {
-        font-family: Georgia, Times, serif;
-        font-size: 1.8em;
-    }
-
     .cap  { 
         font-variant:small-caps; 
     }
@@ -398,24 +337,6 @@ The line spacing defines the distance from baseline to baseline and can be set w
  example --> *7_StylingWithCSS/Part_7/styles/style.css*
 
    ```
-    body { 
-        font-family: Arial, Verdana, Helvetica, sans-serif;
-        font-size: 62.5%;
-    }
-
-    footer, header {
-        background-color: palegreen;
-        border: 1px solid black;
-        padding: 2%;
-        text-align:center;
-        font-size: 2.0em;
-    }    
-
-    article {
-        font-family: Georgia, Times, serif;
-        font-size: 1.8em;
-    }
-
     .p-75 { 
         line-height: 75%; 
     }
@@ -449,29 +370,6 @@ With `word-spacing` you can control the spacing between words. By default the sp
  example --> *7_StylingWithCSS/Part_8/styles/style.css*
 
    ```
-    body { 
-        font: 1.125em/150% Georgia, Times, serif;
-    }
-
-    footer, header {
-        background-color: palegreen;
-        border: 1px solid black;
-        padding: 2%;
-        text-align:center;
-        font-size: 1.1em;
-    } 
-
-    h1 { 
-        font-size: 1.3em;
-        font-style: italic;
-        text-transform: uppercase;
-        letter-spacing: 0.3em;
-    }
-
-    p {  
-        font-size: 1em; 
-    }
-
     .letterspace { 
         letter-spacing: 0.2em; 
     }
@@ -494,10 +392,6 @@ Important for a good reading flow of texts is the alignment, which can be contro
  example --> *7_StylingWithCSS/Part_9/styles/style.css*
 
    ```
-    p {  
-        font-size: 1em; 
-    }
-
     .left { 
         text-align: left; 
     }
@@ -558,15 +452,6 @@ With the CSS property `text-indent` the first line of text can be indented with 
  example --> *7_StylingWithCSS/Part_11/styles/style.css*
 
    ```
-    body { 
-        font: 1.1em/120% Georgia, Times, serif;
-    }
-
-    h1 { 
-        font-size: 1.3em;
-        font-style: italic;
-    }
-
     .p-ident {  
         font-size: 1em;
         text-indent: 1.3em;
@@ -581,18 +466,6 @@ With the CSS property `text-indent` the first line of text can be indented with 
  example --> *7_StylingWithCSS/Part_12/styles/style.css*
 
    ```
-    body { 
-        font: 1.1em/120% Georgia, Times, serif;
-    }
-
-    h1 { 
-        font-size: 1.3em; 
-    }
-
-    p {  
-        font-size: 1em;
-    }
-
     .underline { text-decoration: underline; }
 
     .a-no-underline { text-decoration: none; }
@@ -617,7 +490,64 @@ With the CSS property `text-transform` and the value `uppercase` the text is dis
  ![Preview](7_StylingWithCSS/images/Preview_7_13.JPG)
 
 
+### Add a shadow to the text with `text-shadow`
 
+   ```
+    text-shadow: 5px    /* Horizontal offset */
+                 5px    /* Vertical offset */
+                 5px    /* Shadow gradient radius */
+                 gray;  /* Shadow color */
+   ```
+
+ example --> *7_StylingWithCSS/Part_14/styles/style.css*
+
+   ```
+    .shadow-one { 
+        text-shadow: 3px 3px 5px gray; 
+    }
+
+    .shadow-two { 
+        color: lightgray;
+        text-shadow: 0px -2px 1px black;
+    }
+
+    .shadow-three {
+        color: #ff0000b3;
+        text-shadow:
+            15px -15px 5px yellow,
+            -5px 15px 8px orange;
+    }
+   ```
+
+ ![Preview](7_StylingWithCSS/images/Preview_7_14.JPG)
+
+
+### Split text with `column-count` into several columns
+With the CSS property `column-count` it is possible to split a text automatically into a multi-column set. Is very useful for wide screens, and increases the readability of the text. With `column-gap` the gap between the columns is controlled.
+
+ example --> *7_StylingWithCSS/Part_15/styles/style.css*
+
+   ```
+    .column {
+        column-count: 2;
+        column-gap: 1.5rem;
+    }
+   ```
+
+ ![Preview](7_StylingWithCSS/images/Preview_7_15.JPG)
+
+
+Instead of `column-count` also `column-width` can be used. This will automatically create as many columns depending on this width as they have space in the viewport of the web browser. With the CSS property `columns` there is also a shorthand notation for the two properties `column-width` and `column-count`.
+
+   ```
+    .column {
+        /*columns: 20em 2;*/
+        columns-width: 250px;
+        column-gap: 1.5rem;
+   ```
+
+
+## 7.2. Design lists with CSS
 
 
 

@@ -1,0 +1,8 @@
+body {
+    font: 1.1em/120% Georgia, Times, serif;
+}
+
+.column {
+    column-count: 2;
+    column-gap: 1.5rem;
+}
