@@ -549,6 +549,38 @@ Instead of `column-count` also `column-width` can be used. This will automatical
 
 ## 7.2. Design lists with CSS
 
+### Bullets with `list-style-type`
+For ordered lists with `<ul>` the following values are available:
+- `none` : no bullets
+- `disc` : filled circle, default
+- `circle` : empty circle
+- `square` : square character
+
+For ordered lists with `<ol>` the following values are available:
+- `none` : no numbering
+- `decimal` : numbering like 1., 2,. 3. ...
+- `decimal-leading-zero` : numbering like 01., 02., 03. ...
+- `lower-alpha` and `lower-latin` : numbering like a., b., c. ...
+- `upper-alpha` and `upper-latin` : numbering like A., B., C. ...
+- `lower-roman` : numbering like i., ii., iii., iv. ...
+- `upper-roman` : numbering like I., II., III., IV. ...
+
+ example --> *7_StylingWithCSS/Part_16/styles/style.css*
+
+   ```
+    ul { list-style-type: square; }
+
+    ol { list-style-type: upper-roman; }
+   ```
+
+ ![Preview](7_StylingWithCSS/images/Preview_7_16.JPG)
+
+
+### Images as bullets with `list-style-image`
+
+
+
+
 
 
 
