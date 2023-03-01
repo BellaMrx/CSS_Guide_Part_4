@@ -443,7 +443,178 @@ The CSS property `font` is a shorthand notation for the properties in that order
 
 
 ### Letter and word spacing with `letter-spacing` and `word-spacing`
+If the spacing between the individual letters is to be changed, this can be done with the CSS property `letter-spacing`. This is not suitable for normal continuous text, because it can worsen the readability. It makes more sense for headlines or texts with capital letters only.
+With `word-spacing` you can control the spacing between words. By default the spacing is `0.25em`, but this also depends on the web browser.
 
+ example --> *7_StylingWithCSS/Part_8/styles/style.css*
+
+   ```
+    body { 
+        font: 1.125em/150% Georgia, Times, serif;
+    }
+
+    footer, header {
+        background-color: palegreen;
+        border: 1px solid black;
+        padding: 2%;
+        text-align:center;
+        font-size: 1.1em;
+    } 
+
+    h1 { 
+        font-size: 1.3em;
+        font-style: italic;
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+    }
+
+    p {  
+        font-size: 1em; 
+    }
+
+    .letterspace { 
+        letter-spacing: 0.2em; 
+    }
+
+    .wordspace { 
+        word-spacing: 0.9em;
+    }
+   ```
+
+ ![Preview](7_StylingWithCSS/images/Preview_7_8.png)
+
+
+### Text alignment with `text-align` 
+Important for a good reading flow of texts is the alignment, which can be controlled with the CSS property `text-align`. There are four values for this:
+`left` : This aligns the text left, which is usually the default alignment of the web browser. 
+`right` : This aligns the text to the right.
+`center` : This will center the text, this is good for headings, poems or short texts.
+`justify` : This aligns the text in justified text, where the individual lines are of equal width and flush left and right.
+
+ example --> *7_StylingWithCSS/Part_9/styles/style.css*
+
+   ```
+    p {  
+        font-size: 1em; 
+    }
+
+    .left { 
+        text-align: left; 
+    }
+
+    .right { 
+        text-align: right; 
+    }
+
+    .center { 
+        text-align: center; 
+    }
+
+    .justify { 
+        text-align: justify; 
+    }
+   ```
+
+ ![Preview](7_StylingWithCSS/images/Preview_7_9.png)
+
+
+### Vertical alignment with `vertical-align`
+The CSS property `vertical-align` is used for vertical alignment of inline elements and is not suitable for block elements.
+
+ example --> *7_StylingWithCSS/Part_10/styles/style.css*
+
+   ```
+    .vtop {
+        vertical-align: top;
+    }
+
+    .vmiddle {
+        vertical-align: middle;
+    }
+
+    .vbottom {
+        vertical-align: bottom;
+    }
+
+    .vsuper {
+        vertical-align: super;
+    }
+
+    .vsub {
+        vertical-align: sub;
+    }
+
+    .vsub-05em {
+        vertical-align: -0.5em;
+    }
+   ```
+
+ ![Preview](7_StylingWithCSS/images/Preview_7_10.JPG)
+
+
+### Indent text with `text-indent`
+With the CSS property `text-indent` the first line of text can be indented with a positive value or pulled out with a negative value to maintain the reading flow. This is usually used for books and magazines, but not so much for web pages. 
+
+ example --> *7_StylingWithCSS/Part_11/styles/style.css*
+
+   ```
+    body { 
+        font: 1.1em/120% Georgia, Times, serif;
+    }
+
+    h1 { 
+        font-size: 1.3em;
+        font-style: italic;
+    }
+
+    .p-ident {  
+        font-size: 1em;
+        text-indent: 1.3em;
+    }
+   ```
+
+ ![Preview](7_StylingWithCSS/images/Preview_7_11.JPG)
+
+
+### Underline and line-through text with `text-decoration`
+
+ example --> *7_StylingWithCSS/Part_12/styles/style.css*
+
+   ```
+    body { 
+        font: 1.1em/120% Georgia, Times, serif;
+    }
+
+    h1 { 
+        font-size: 1.3em; 
+    }
+
+    p {  
+        font-size: 1em;
+    }
+
+    .underline { text-decoration: underline; }
+
+    .a-no-underline { text-decoration: none; }
+
+    .line-through { text-decoration: line-through; }
+   ```
+
+ ![Preview](7_StylingWithCSS/images/Preview_7_12.JPG)
+
+
+### Case sensitive text with `text-transform`
+With the CSS property `text-transform` and the value `uppercase` the text is displayed in upper case and with `lowercase` in lower case. With `capitalize` only the first letter is displayed as uppercase.
+
+ example --> *7_StylingWithCSS/Part_13/styles/style.css*
+
+   ```
+    .uppercase { text-transform: uppercase; }
+
+    .lowercase { text-transform: lowercase; }
+   ```
+
+ ![Preview](7_StylingWithCSS/images/Preview_7_13.JPG)
 
 
 

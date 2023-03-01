@@ -1,0 +1,55 @@
+body {
+    font: 1.1em/120% Georgia, Times, serif;
+}
+
+.tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.vtop {
+    vertical-align: top;
+}
+
+.vmiddle {
+    vertical-align: middle;
+}
+
+.vbottom {
+    vertical-align: bottom;
+}
+
+.vsuper {
+    vertical-align: super;
+}
+
+.vsub {
+    vertical-align: sub;
+}
+
+.vsub-05em {
+    vertical-align: -0.5em;
+}
+
+.tg td {
+    padding: 1em;
+    border: solid black 1px;
+    height: 200px;
+    background: #DAF7A6;
+}
+
+.tg th {
+    padding: 1em;
+    border: solid black 1px;
+    font-weight: bold;
+    background: palegreen;
+}
+
+article {
+    clear: both;
+}
+
+div {
+    background: #DAF7A6;
+    margin-bottom: 15px;
+}
