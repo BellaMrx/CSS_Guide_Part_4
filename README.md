@@ -80,7 +80,7 @@ Overview of generic fonts
 | cursive | this font is intended to give the impression of a cursive script | Comic Sans MS, Florence, Parkavenue, Monotype Corsiva |
 | fantasy | are often decorative ornamental fonts that can be used for creative purposes | Brushstroke, Impact, Haettenschweiler, Oldtown |
 
- example --> *7_StylingWithCSS/Part_1/style.css*
+ example --> *7_StylingWithCSS/Part_1/styles/style.css*
 
    ```
     body {
@@ -116,10 +116,10 @@ With `@font-face` it is possible to use fonts that are not installed on the user
     }
    ```
 
-### Embed license-free fonts from Google into the website
+#### Embed license-free fonts from Google into the website
 The fonts from Google Fonts can be found at [Google Fonts](https://fonts.google.com/).
 
- example --> *7_StylingWithCSS/Part_2/style.css*
+ example --> *7_StylingWithCSS/Part_2/styles/style.css*
 
    ```
     @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
@@ -143,7 +143,7 @@ Other license-free and commercial providers of web fonts
 - [FontsForWeb](http://fontsforweb.com)
 
 
-### Use symbols with icon fonts
+#### Use symbols with icon fonts
 There are several providers of icon fonts, one of the most popular is [Font Awesome](https://fontawesome.com/). There you can find a lot of icons that are needed for a website.
 
 First, the CSS file must be included in the HTML document.
@@ -203,7 +203,7 @@ CSS provides predefined font size keywords such as `small`, `x-small`, `xx-small
 #### Relative font sizes with `em`.
 An easy way to adjust the font size for the whole document is to set `font-size` for the *body* element. If `font-size: 1em;` (1em = 100%) is set, the default value of the web browser is used. 
 The fact that a relative font size of the *body* element controls the font size for the elements of the web page through inheritance, this option is popular in practice. But it is exactly this inheritance that can make adjusting font sizes a bit more complex if not taken care of.
- example --> *7_StylingWithCSS/Part_4/styleA.css*
+ example --> *7_StylingWithCSS/Part_4/styles/styleA.css*
 
    ```
     body {
@@ -236,7 +236,7 @@ The fact that a relative font size of the *body* element controls the font size 
 
 #### Set font size with `rem`
 The problem with inheritance of relative values that have with font size with `em` no longer occurs with `rem` (=root em). Since it inherits to the highest root element `<html>` instead of the font size of the corresponding parent element.
- example --> *7_StylingWithCSS/Part_4/styleB.css*
+ example --> *7_StylingWithCSS/Part_4/styles/styleB.css*
 
    ```
     html { 
@@ -276,7 +276,7 @@ The unit `pt` (point) is more suitable for printing, if a print version is creat
 #### the responsive units `vw` and `vh`
 The *viewport units* with `vw` (view width) and `vh` (view height), are relative to the screen dimensions. This assigns a size to an element, which is calculated in relation to the width and height of the viewport. `1vw` corresponds to 1% of the width of the viewport, exactly the same applies to `vh` (corresponds to 1% of the height of the viewport).
 Additionally there are the units `vmin` and `vmax`, which refer to the height or width and use the smaller or larger value.
- example --> *7_StylingWithCSS/Part_4/styleD.css*
+ example --> *7_StylingWithCSS/Part_4/styles/styleD.css*
 
    ```
     html { 
@@ -307,8 +307,142 @@ Additionally there are the units `vmin` and `vmax`, which refer to the height or
 
 
 ### Italic and bold fonts with `font-style` and `font-weight`
+An italic font can be rendered with the CSS property `font-style` and the value `italic`. If a font does not have an `italic` cut, the web browser will try to italicize it with `oblique`. The default value is `normal`.
+
+The CSS property `font-weight` can be used to define the thickness of the font. The `bold` value defines a bold font style. The default value is `normal`. Besides `bold` there are also the values `bolder` and `lighter`, as well as the numeric values `100`, `200` to `900` (in steps of 100). `400` stands for `normal` and `700` for `bold`.
+
+ example --> *7_StylingWithCSS/Part_5/styles/style.css*
+
+   ```
+    body {
+        font-family: Arial, Verdana, Helvetica, sans-serif;
+        font-size: 62.5%;
+    }
+
+    footer, header {
+        background-color: palegreen;
+        border: 1px solid black;
+        padding: 2%;
+        text-align: center;
+        font-size: 2.0em;
+    }
+
+    article {
+        font-family: Georgia, Times, serif;
+        font-size: 1.8em;
+    }
+
+    .italic {
+        font-style: italic;
+    }
+
+    .oblique {
+        font-style: oblique;
+    }
+
+    .normal {
+        font-style: normal;
+    }
+
+    .weight-normal {
+        font-weight: normal;
+    }
+
+    .weight-bold {
+        font-weight: bold;
+    }
+   ```
+
+ ![Preview](7_StylingWithCSS/images/Preview_7_5.JPG)
 
 
+### Create small caps with `font-variant`
+With `font-variant` and the value `small-caps` the text will be converted to all uppercase, keeping the size of the lowercase letters.
+
+ example --> *7_StylingWithCSS/Part_6/styles/style.css*
+
+   ```
+    body { 
+        font-family: Arial, Verdana, Helvetica, sans-serif;
+        font-size: 62.5%;
+    }
+
+    footer, header {
+        background-color: palegreen;
+        border: 1px solid black;
+        padding: 2%;
+        text-align:center;
+        font-size: 2.0em;
+    }    
+
+    article {
+        font-family: Georgia, Times, serif;
+        font-size: 1.8em;
+    }
+
+    .cap  { 
+        font-variant:small-caps; 
+    }
+
+    .vers { 
+        text-transform:uppercase;
+    }
+   ```
+
+ ![Preview](7_StylingWithCSS/images/Preview_7_6.JPG)
+
+
+### Line spacing with `line-height`
+The line spacing defines the distance from baseline to baseline and can be set with the CSS property `line-height`. The line spacing is important for the readability of longer text passages.
+
+ example --> *7_StylingWithCSS/Part_7/styles/style.css*
+
+   ```
+    body { 
+        font-family: Arial, Verdana, Helvetica, sans-serif;
+        font-size: 62.5%;
+    }
+
+    footer, header {
+        background-color: palegreen;
+        border: 1px solid black;
+        padding: 2%;
+        text-align:center;
+        font-size: 2.0em;
+    }    
+
+    article {
+        font-family: Georgia, Times, serif;
+        font-size: 1.8em;
+    }
+
+    .p-75 { 
+        line-height: 75%; 
+    }
+
+    .p-100 { 
+        line-height: 100%; 
+    }
+
+    .p-150 { 
+        line-height: 150%; 
+    }
+   ```
+
+ ![Preview](7_StylingWithCSS/images/Preview_7_7.png)
+
+
+#### The shorthand with `font`
+The CSS property `font` is a shorthand notation for the properties in that order `font-style`, `font-weight`, `font-size/line-height`, and `font-family`.
+
+   ```
+    p {
+        font: italic normal bold 1.2em/120% Georgia, Times, serif;
+    }
+   ```
+
+
+### Letter and word spacing with `letter-spacing` and `word-spacing`
 
 
 
