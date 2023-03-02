@@ -628,13 +628,13 @@ The expandable menu for the mobile version was created here with *jQuery*. This 
  example --> *7_StylingWithCSS/Part_20/styles/style.css*
 
 Desktop-Version
+
  ![Preview](7_StylingWithCSS/images/Preview_7_20A.JPG)
 
 
 Mobile-Version
- ![Preview](7_StylingWithCSS/images/Preview_7_20B.JPG)
 
- ![Preview](7_StylingWithCSS/images/Preview_7_20C.JPG)
+ ![Preview](7_StylingWithCSS/images/Preview_7_20B.JPG) ![Preview](7_StylingWithCSS/images/Preview_7_20C.JPG)
 
 
 
