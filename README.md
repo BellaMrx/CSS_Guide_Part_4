@@ -577,6 +577,65 @@ For ordered lists with `<ol>` the following values are available:
 
 
 ### Images as bullets with `list-style-image`
+With the CSS property `list-style-image` an image can be used as a bullet.
+
+ example --> *7_StylingWithCSS/Part_17/styles/style.css*
+
+   ```
+    ul { list-style-image: url("../images/star.png"); }
+   ```
+
+ ![Preview](7_StylingWithCSS/images/Preview_7_17.JPG)
+
+
+Instead of an image, a special character can also be used. For this purpose `list-style-type` is set to `none`. And using `li:before` and `content` a special character is used as list symbols.
+ 
+ example --> *7_StylingWithCSS/Part_18/styles/style.css*
+
+   ```
+    .specialul { 
+        list-style-type: none;
+    }
+
+    .specialul li:before { 
+        content: '\2023'; color: red; 
+        font-size: 20px;
+    }
+   ```
+
+ ![Preview](7_StylingWithCSS/images/Preview_7_18.JPG)
+
+You can find this special character here [HTML Symbols - U2023](https://www.htmlsymbols.xyz/unicode/U+2023). And more you can find here [HTML Symbols](https://www.htmlsymbols.xyz/).
+
+
+### Position bulleted list with `list-style-position`
+With the CSS property `list-style-position` the bullet point can be positioned inside or outside. The default behavior is set with the value `outside`, so the bullet point is located to the left of the text block. With the value `inside` the bullet point is inside the text block. 
+ 
+ example --> *7_StylingWithCSS/Part_19/styles/style.css*
+
+   ```
+    .out { list-style-position: outside; }
+
+    .in { list-style-position: inside; }
+   ```
+
+ ![Preview](7_StylingWithCSS/images/Preview_7_19.JPG)
+
+
+### Create navigation and menus with lists
+The expandable menu for the mobile version was created here with *jQuery*. This is also possible with JavaScript.
+ 
+ example --> *7_StylingWithCSS/Part_20/styles/style.css*
+
+Desktop-Version
+ ![Preview](7_StylingWithCSS/images/Preview_7_20A.JPG)
+
+
+Mobile-Version
+ ![Preview](7_StylingWithCSS/images/Preview_7_20B.JPG)
+
+ ![Preview](7_StylingWithCSS/images/Preview_7_20C.JPG)
+
 
 
 

@@ -1,0 +1,136 @@
+/* Basic styling */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+nav {
+    background: seagreen;
+    padding: 1em;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a,
+.logo {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.menu li {
+    font-size: 1rem;
+    padding: 1em;
+    white-space: nowrap;
+}
+
+.item.active {
+    display: block;
+}
+
+
+/* Mobile menu */
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ul-list {
+    display: none;
+}
+
+.menubutton {
+    text-align: right;
+}
+
+.toogle {
+    order: 0;
+}
+
+.toggle {
+    flex: 1;
+    text-align: right;
+}
+
+.menu-item.button {
+    order: 1;
+}
+
+.menu-item {
+    width: 100%;
+    text-align: center;
+    order: 2;
+}
+
+.button {
+    border-bottom: 2px #000 solid;
+}
+
+.button a {
+    padding: 7.5px 15px;
+    background: #000;
+    border: 1px seagreen solid;
+}
+
+.button a:hover {
+    text-decoration: none;
+    background: #184428;
+    border-color: #242424;
+}
+
+
+/* Tablet menu */
+
+@media all and (min-width: 37.5em) {
+    .logo {
+        flex: 1;
+    }
+    .menu-item.button {
+        width: auto;
+        border-bottom: 0;
+    }
+}
+
+
+/* Desktop menu */
+
+@media all and (min-width: 60em) {
+    .menu-item {
+        width: auto;
+    }
+    .logo {
+        order: 0;
+    }
+    .menu-item {
+        order: 1;
+    }
+    .button {
+        order: 2;
+    }
+    .menu li.button {
+        padding-right: 0;
+    }
+    .toggle {
+        display: none;
+    }
+    .ul-list {
+        display: block;
+    }
+    .menubutton {
+        display: none;
+    }
+}
