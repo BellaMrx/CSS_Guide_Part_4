@@ -710,28 +710,11 @@ The CSS property `border-collapse` can be used to specify whether the borders of
 
 
 ### Position table caption with `caption-side`
-
- example --> *7_StylingWithCSS/Part_24*
-
-   ```
-    ...
-    table {
-        width: 700px;
-        border: 1px solid black;
-        border-spacing: 5px 10px;
-    } 
-    ...
-   ```
-
- ![Preview](7_StylingWithCSS/images/Preview_7_24.JPG)
-
-
-### Position table caption with `caption-side`
 This sets the position of the table caption. Usually it is positioned above the table with `caption-side: top;`. With the value `bottom` it is positioned below the table. 
 
 With `empty-cells: hide;` the frame can be hidden if there is no content. The default value would be `empty-cells: show;`, then the frame is displayed without any content.
 
- example --> *7_StylingWithCSS/Part_22*
+ example --> *7_StylingWithCSS/Part_24*
 
 
    ```
@@ -749,7 +732,7 @@ With `empty-cells: hide;` the frame can be hidden if there is no content. The de
     ...
    ```
 
- ![Preview](7_StylingWithCSS/images/Preview_7_23.JPG)
+ ![Preview](7_StylingWithCSS/images/Preview_7_24.JPG)
 
 
 ## 7.4. 
