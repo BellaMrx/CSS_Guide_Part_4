@@ -45,6 +45,7 @@ The code examples in the guide can be found in the listed folders.
 7. Styling with CSS
     - 7.1. Text design with CSS
     - 7.2. Design lists with CSS
+    - 7.3. Tables with CSS
 8. Testing and organizing
 
 
@@ -625,7 +626,7 @@ With the CSS property `list-style-position` the bullet point can be positioned i
 ### Create navigation and menus with lists
 The expandable menu for the mobile version was created here with *jQuery*. This is also possible with JavaScript.
  
- example --> *7_StylingWithCSS/Part_20/styles/style.css*
+ example --> *7_StylingWithCSS/Part_20*
 
 Desktop-Version
 
@@ -637,8 +638,121 @@ Mobile-Version
  ![Preview](7_StylingWithCSS/images/Preview_7_20B.JPG) ![Preview](7_StylingWithCSS/images/Preview_7_20C.JPG)
 
 
+## 7.3. Tables with CSS
+
+ example --> *7_StylingWithCSS/Part_21/styles/style.css*
+
+   ```
+    table {
+        width: 700px;
+    } 
+
+    th {
+        padding: 0.5em;
+        text-transform: uppercase;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        text-align: left;
+    }
+
+    tr:nth-child(even) { background: lightgray; }
+
+    td:nth-child(1) {
+        font-weight: bold;
+        width: 100px;
+    }
+
+    td { padding: 0.5em; }
+
+    tr:hover {
+        background: darkblue;
+        color: white;
+    }
+   ```
+
+ ![Preview](7_StylingWithCSS/images/Preview_7_21.JPG)
 
 
+### Collapsing borders for table cells with `border-collapse`
+The CSS property `border-collapse` can be used to specify whether the borders of the individual cells are displayed separately (`border-collapse: seperate;`) or collapsed (`border-collapse: collapse;`).
+
+ example --> *7_StylingWithCSS/Part_22*
+
+
+   ```
+    ...
+    table {
+        width: 700px;
+        border: 1px solid black;
+        border-collapse: separate;
+    }
+    ...
+   ```
+
+ ![Preview](7_StylingWithCSS/images/Preview_7_22.JPG)
+
+
+### Spacing between cells with `border-spacing`
+
+ example --> *7_StylingWithCSS/Part_23*
+
+   ```
+    ...
+    table {
+        width: 700px;
+        border: 1px solid black;
+        border-spacing: 5px 10px;
+    } 
+    ...
+   ```
+
+ ![Preview](7_StylingWithCSS/images/Preview_7_23.JPG)
+
+
+### Position table caption with `caption-side`
+
+ example --> *7_StylingWithCSS/Part_24*
+
+   ```
+    ...
+    table {
+        width: 700px;
+        border: 1px solid black;
+        border-spacing: 5px 10px;
+    } 
+    ...
+   ```
+
+ ![Preview](7_StylingWithCSS/images/Preview_7_24.JPG)
+
+
+### Position table caption with `caption-side`
+This sets the position of the table caption. Usually it is positioned above the table with `caption-side: top;`. With the value `bottom` it is positioned below the table. 
+
+With `empty-cells: hide;` the frame can be hidden if there is no content. The default value would be `empty-cells: show;`, then the frame is displayed without any content.
+
+ example --> *7_StylingWithCSS/Part_22*
+
+
+   ```
+    ...
+    table {
+        width: 700px;
+        empty-cells: hide;
+        caption-side: bottom;
+        background: lightgray;
+    }
+
+    ...
+
+    caption { font-style: italic; text-align: left; padding-top: 5px; }
+    ...
+   ```
+
+ ![Preview](7_StylingWithCSS/images/Preview_7_23.JPG)
+
+
+## 7.4. 
 
 
 

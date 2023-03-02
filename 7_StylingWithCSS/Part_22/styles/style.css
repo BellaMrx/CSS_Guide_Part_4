@@ -1,0 +1,19 @@
+body {
+    font: 1.1em/120% Georgia, Times, serif;
+}
+
+table {
+    width: 700px;
+    border: 1px solid black;
+    border-collapse: separate;
+}
+
+th {
+    padding: 5px;
+    border: 1px solid black;
+}
+
+td {
+    padding: 5px;
+    border: 1px solid black;
+}

@@ -1,0 +1,24 @@
+body { 
+  font: 1.1em/120% Georgia, Times, serif;
+}  
+
+table {
+  width: 700px;
+  empty-cells: hide;
+  caption-side: bottom;
+  background: lightgray;
+}
+
+th {
+  padding: 5px;
+  border: 1px solid black;
+  background: white;
+}
+
+td {
+  padding: 5px;
+  border: 1px solid black;
+  background: white;
+}
+
+caption { font-style: italic; text-align: left; padding-top: 5px; }
