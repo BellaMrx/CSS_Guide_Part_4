@@ -795,7 +795,9 @@ Thus, it is also possible to position the images easily. By adding to the classe
 ## 7.5. Transfom elements 
 With the help of the CSS property `transform` it is possible to change the position of HTML elements. Possible are: a movement with `translate()`, an enlargement or reduction with `scale()`, a rotation with `rotate()`, tilting of elements with `skew()` and a distortion with `matrix()`.
 
- example --> *7_StylingWithCSS/Part_27*
+### `transform: scale();`
+
+ example --> *7_StylingWithCSS/Part_27/index.html*
 
    ```
     ...
@@ -811,9 +813,10 @@ With the help of the CSS property `transform` it is possible to change the posit
     ...
    ```
 
+ example --> *7_StylingWithCSS/Part_27/styles/styleA.css*
+
    ```
     ...
-
     img:hover {
         transform: scale(1.25);
         border: 4px white solid;
@@ -826,6 +829,75 @@ In this example with `scale(1.25)`, the images are enlarged by a factor of 1.25 
  ![Preview](7_StylingWithCSS/images/Preview_7_27.JPG)
 
 
+### `transform: rotate();`
+With `rotate()` the element is rotated by a specified number of degrees. With `transform: rotate(15deg);` the element is rotated by 15 degrees, clockwise. A negative value rotates the element counterclockwise.
+
+ example --> *7_StylingWithCSS/Part_27/styles/styleB.css*
+
+   ```
+    ...
+    img:hover {
+        transform: rotate(15deg);
+        border: 4px white solid;
+    }
+    ...
+   ```
+
+ ![Preview](7_StylingWithCSS/images/Preview_7_28.JPG)
+
+
+### `transform: skew();`
+The `skew()` function can be used to tilt an HTML element around the x and y axis. Here two values are given in degrees. The first value gives the tilt around the x-axis and the second gives the tilt around the y-axis.
+
+ example --> *7_StylingWithCSS/Part_27/styles/styleC.css*
+
+   ```
+    ...
+    img:hover {
+        transform: skew(5deg, 10deg);
+        border: 4px white solid;
+    }
+    ...
+   ```
+
+ ![Preview](7_StylingWithCSS/images/Preview_7_29.JPG)
+
+If an HTML element should only be tilted around the x or y axis, this can be done with `skewX()` or `skewY()`.
+
+
+### `transform: translate();`
+With the function `translate()` HTML elements can be moved. Here also two values are needed to want to move the element along the x- and y-axis.
+
+ example --> *7_StylingWithCSS/Part_27/styles/styleD.css*
+
+   ```
+    ...
+    img:hover {
+        transform: translate(30px, 20px);
+        border: 4px white solid;
+    }
+    ...
+   ```
+
+ ![Preview](7_StylingWithCSS/images/Preview_7_30.JPG)
+
+
+### Combination of transformations
+It is possible to combine several functions with each other. For this purpose, the functions must only be separated from each other with a space.
+
+   ```
+    ...
+    img:hover {
+        transform: scale(1.25) rotate(10deg);
+    }
+    ...
+   ```
+
+### Transform other HTML elements
+
+
+
+
 
 
 
@@ -834,6 +906,8 @@ In this example with `scale(1.25)`, the images are enlarged by a factor of 1.25 
 ------------------------------------------------------------------------------------------------
 
 This is the end of CSS Guide Part 4. 
+
+This guide is an overview that a web developer should know. There is much more to know about CSS and always new things to learn.
 
 The other parts you can find here:
 - [CSS Guide Part I]().
