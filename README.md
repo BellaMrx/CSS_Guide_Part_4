@@ -46,6 +46,8 @@ The code examples in the guide can be found in the listed folders.
     - 7.1. Text design with CSS
     - 7.2. Design lists with CSS
     - 7.3. Tables with CSS
+    - 7.4. Images and graphics with `width` and `height`
+    - 7.5. Transfom elements
 8. Testing and organizing
 
 
@@ -716,7 +718,6 @@ With `empty-cells: hide;` the frame can be hidden if there is no content. The de
 
  example --> *7_StylingWithCSS/Part_24*
 
-
    ```
     ...
     table {
@@ -735,7 +736,96 @@ With `empty-cells: hide;` the frame can be hidden if there is no content. The de
  ![Preview](7_StylingWithCSS/images/Preview_7_24.JPG)
 
 
-## 7.4. 
+## 7.4. Images and graphics with `width` and `height`
+The size of the images can be set with the CSS properties `width` and `height`. It is possible to display one and the same image in different sizes. If each `<img>`- tag is assigned a class, it is ralatively easy to display them in different sizes.
+
+ example --> *7_StylingWithCSS/Part_25/styles/style.css*
+
+   ```
+    .large {
+        width: 225px;
+        height: 250px;
+    }
+
+    .medium {
+        width: 150px;
+        height: 175px;
+    }
+
+    .small {
+        width: 75px;
+        height: 100px;
+    }
+   ```
+
+ ![Preview](7_StylingWithCSS/images/Preview_7_25.JPG)
+
+
+Thus, it is also possible to position the images easily. By adding to the classes, more.
+
+ example --> *7_StylingWithCSS/Part_26*
+
+   ```
+    ...
+    <p>
+        <img src="images/image.jpg" alt="Owl" class="align-left medium" />Lorem ipsum ...
+    </p>
+    ...
+   ```
+
+   ```
+    ...
+    .medium {
+        width: 150px;
+        height: 175px;
+    }
+
+    ...
+
+    .align-left {
+        float: left;
+        margin: 0 0.6em 0.3em 0;
+    }
+    ...
+   ```
+
+ ![Preview](7_StylingWithCSS/images/Preview_7_26.JPG)
+
+
+## 7.5. Transfom elements 
+With the help of the CSS property `transform` it is possible to change the position of HTML elements. Possible are: a movement with `translate()`, an enlargement or reduction with `scale()`, a rotation with `rotate()`, tilting of elements with `skew()` and a distortion with `matrix()`.
+
+ example --> *7_StylingWithCSS/Part_27*
+
+   ```
+    ...
+    <ul>
+        <li>
+            <img src="images/image1.jpg" alt="Pexels photography" loading="lazy">
+        </li>
+        <li>
+            <img src="images/image2.jpg" alt="Pexels photography" loading="lazy">
+        </li>
+        ...    
+    </ul>
+    ...
+   ```
+
+   ```
+    ...
+
+    img:hover {
+        transform: scale(1.25);
+        border: 4px white solid;
+    }
+    ...
+   ```
+
+In this example with `scale(1.25)`, the images are enlarged by a factor of 1.25 as soon as the mouse pointer passes over them (`hover`). The factor `scale(1.0)` would have no effect.
+
+ ![Preview](7_StylingWithCSS/images/Preview_7_27A.JPG)
+
+ ![Preview](7_StylingWithCSS/images/Preview_7_27B.JPG)
 
 
 
