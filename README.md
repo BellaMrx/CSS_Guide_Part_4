@@ -823,9 +823,8 @@ With the help of the CSS property `transform` it is possible to change the posit
 
 In this example with `scale(1.25)`, the images are enlarged by a factor of 1.25 as soon as the mouse pointer passes over them (`hover`). The factor `scale(1.0)` would have no effect.
 
- ![Preview](7_StylingWithCSS/images/Preview_7_27A.JPG)
+ ![Preview](7_StylingWithCSS/images/Preview_7_27.JPG)
 
- ![Preview](7_StylingWithCSS/images/Preview_7_27B.JPG)
 
 
 
