@@ -1095,7 +1095,7 @@ CSS now offers many possibilities for designing forms. Despite the many possibil
     }
    ```
 
- ![Preview](7_StylingWithCSS/images/Preview_7_32.JPG)
+ ![Preview](7_StylingWithCSS/images/Preview_7_32.png)
 
 The indication of the data protection regulation is mandatory in EU countries.
 
