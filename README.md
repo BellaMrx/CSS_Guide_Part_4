@@ -51,6 +51,8 @@ The code examples in the guide can be found in the listed folders.
     - 7.6. Style HTML forms with CSS
 8. Testing and organizing
     - 8.1 Validate HTML and CSS
+    - 8.2. View websites in different sizes
+    - 8.3. Set up central stylesheet
 
 
 --------------------------------------------------------------------------------------------
@@ -1134,15 +1136,65 @@ There are various test systems on the web for testing the capabilities of the we
 ### HTML5 web browser test
 To check what the web browser can do regarding HTML, it is possible to test here [HTML5 Test](https://html5test.com).
 
+
+### Use it or not?
 It is not easy to keep track of the different web technologies and what can be used with which web browser. That's what the web database [HTML5 Test](www.caniuse.com) is for. There you can check the latest CSS and HTML features.
 
  ![Preview](7_StylingWithCSS/images/Preview_8_5.JPG)
 
 
+### Function query with the `@supports` rule
+Whether a certain CSS property is supported by a web browser can also be checked with the CSS rule `@supports` (CSS Feature Queries).
+
+An example:
+
+   ```
+    ...
+    @supports ( hyphens: auto) {
+        p {
+            text-align: justify;
+            hyphens: auto;
+        }
+    }
+    ...
+   ```
+
+Here `@supports` is used to check whether the web browser understands the `hyphens: auto` property (`hyphens` = automatic hyphenation of the web browser). If this is the case, then the text in the p elements is justified with `justify` and the CSS property is set to `auto`.
 
 
+## 8.2. View websites in different sizes
+For viewing websites in different sizes there are a lot of online tools, the web browser itself offers this or also plug-ins from development environments. There are also websites that offer this, e.g. the [Viewport Resizer](http://lab.maltewassermann.com/) or [Blisk](https://blisk.io/).
+
+Viewport Resizer
+
+ ![Preview](7_StylingWithCSS/images/Preview_8_6.JPG)
 
 
+## 8.3. Set up central stylesheet
+If websites are very large, it is recommended to use several style sheets when developing the website e.g. one stylesheet for the layout and one for the navigation and more. This is clearer during the development of the website. 
+So a central stylesheet is used, which is included as usual with the *link* -element in the HTML document. However, this centarle stylesheet does not contain any ordinary CSS content, but only loads the other CSS files using the `@import` rule.
+
+An example:
+
+   ```
+   /* Basic design */
+    @import url("layout.css");
+
+   /* Navigation */
+    @import url("navi.css");
+
+   /* Print version */
+    @import url("print.css");
+
+   ```
+
+In practice, it is recommended to put the CSS files in an extra directory, e.g. "styles", for clarity on large websites.
+
+After the development of the website, the CSS files should be merged again. Because the disadvantage of multiple individual CSS files is that multiple server requests are necessary, which can significantly increase the loading time of the website.
+
+To reduce the file size of the CSS file even more and thus improve the loading time, all unnecessary lines of code with spaces, line breaks and comments can be removed. Also for this there are online tools like [CSS Compressor](https://cssminifier.com) or [YUI Compressor](http://refresh-sf.com/). A backup should be made beforehand, because after CSS compression the CSS file is no longer pleasant to read or edit.
+
+There are also development tools with which such an effort can be avoided e.g. [Grunt](http://gruntjs.com) or Gulp [Gulp](https://gulpjs.com/).
 
 
 ------------------------------------------------------------------------------------------------
