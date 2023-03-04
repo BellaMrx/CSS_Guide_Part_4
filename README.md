@@ -918,9 +918,9 @@ When using `transform` the transition can be a bit unattractive, because the e.g
    ```
 
 `transition` is a shorthand notation, from the following properties:
-`transition-property` : This specifies the property to animate during the transition. `all` specifies that all properties will be animated. There you can also use e.g. `background` to animate.
-`transition-duration` : This specifies the duration of the transition in seconds e.g. `1s`.
-`transition-timing-function` : This specification is a kind of temporal course of the transition. For example, `ease` means that the transition starts slowly, speeds up in the middle and ends slowly again. Other time courses are: `linear`, `ease-in`, `ease-out`, `ease-in-out`.
+- `transition-property` : This specifies the property to animate during the transition. `all` specifies that all properties will be animated. There you can also use e.g. `background` to animate.
+- `transition-duration` : This specifies the duration of the transition in seconds e.g. `1s`.
+- `transition-timing-function` : This specification is a kind of temporal course of the transition. For example, `ease` means that the transition starts slowly, speeds up in the middle and ends slowly again. Other time courses are: `linear`, `ease-in`, `ease-out`, `ease-in-out`.
 
 Some demonstrations and examples of 'transition' can be found on this website [CSS Transitions](http://css3.bradshawenterprises.com/transitions/).
 
