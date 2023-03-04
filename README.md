@@ -53,7 +53,7 @@ The code examples in the guide can be found in the listed folders.
     - 8.1 Validate HTML and CSS
     - 8.2. View websites in different sizes
     - 8.3. Set up central stylesheet
-
+9. Useful websites about CSS
 
 --------------------------------------------------------------------------------------------
 
@@ -1194,7 +1194,15 @@ After the development of the website, the CSS files should be merged again. Beca
 
 To reduce the file size of the CSS file even more and thus improve the loading time, all unnecessary lines of code with spaces, line breaks and comments can be removed. Also for this there are online tools like [CSS Compressor](https://cssminifier.com) or [YUI Compressor](http://refresh-sf.com/). A backup should be made beforehand, because after CSS compression the CSS file is no longer pleasant to read or edit.
 
-There are also development tools with which such an effort can be avoided e.g. [Grunt](http://gruntjs.com) or Gulp [Gulp](https://gulpjs.com/).
+There are also development tools with which such an effort can be avoided e.g. [Grunt](http://gruntjs.com) or [Gulp](https://gulpjs.com/).
+
+------------------------------------------------------------------------------------------------
+
+# 9. Useful websites about CSS
+ * [Google](https://www.google.com/)
+ * [GitHub](https://github.com/) 
+ * 
+ * 
 
 
 ------------------------------------------------------------------------------------------------
