@@ -50,6 +50,7 @@ The code examples in the guide can be found in the listed folders.
     - 7.5. Transfom elements
     - 7.6. Style HTML forms with CSS
 8. Testing and organizing
+    - 8.1 Validate HTML and CSS
 
 
 --------------------------------------------------------------------------------------------
@@ -1097,7 +1098,50 @@ CSS now offers many possibilities for designing forms. Despite the many possibil
 
  ![Preview](7_StylingWithCSS/images/Preview_7_32.png)
 
-The indication of the data protection regulation is mandatory in EU countries.
+The indication of the privacy policy is mandatory in EU countries.
+
+
+-----------------------------------------------------------------------------------------------
+
+# 8. Testing and organizing
+CSS and HTML are in constant development, and not every web browser can handle all new features right away. And since there are more and more different devices and therefore different screen sizes, testing created websites is worthwhile.
+
+## 8.1 Validate HTML and CSS
+The first in testing should be validation. Many web browsers, editors and development environments already offer functions or plug-ins that take care of validation. Otherwise, the W3C with its online validator for HTML [W3C - Markup Validation Service](https://validator.w3.org/) and for CSS [W3C - CSS Validation Service](https://jigsaw.w3.org/css-validator/) can be used.
+
+ ![Preview](7_StylingWithCSS/images/Preview_8_3.JPG)
+
+ ![Preview](7_StylingWithCSS/images/Preview_8_4.JPG)
+
+
+However, a valid website does not mean that it is perfect at the same time. It does not improve reliability, speed and operation, but it is a tool for quality assurance.
+
+
+### Most used web browsers
+When testing, you should also ask yourself which web browsers are most used to test the website. It is possible to look at statistics, which browser is used more or less. An overview of this can be found on the websites [W3Counter](http://www.w3counter.com/trends), [statcounter](http://gs.statcounter.com/) or [statista](https://www.statista.com/). 
+
+ ![Preview](7_StylingWithCSS/images/Preview_8_2.JPG)
+
+Such statistics should not be generalized too much, because e.g. articles for Apple are mainly used with *Safari*.
+
+
+### CSS web browser test
+There are various test systems on the web for testing the capabilities of the web browser for CSS. The advantage is that already during the development of the website it can be weighed up whether a new CSS feature should be used in the website at all or whether a fallback must be set up for certain web browsers. A special test for CSS properties can be performed on the website [The CSS3 Test](http://css3test.com). The current web browsers currently manage something like 50% to 67%, which is not bad. The results for the individual areas are listed there.
+
+ ![Preview](7_StylingWithCSS/images/Preview_8_1.JPG)
+
+
+### HTML5 web browser test
+To check what the web browser can do regarding HTML, it is possible to test here [HTML5 Test](https://html5test.com).
+
+It is not easy to keep track of the different web technologies and what can be used with which web browser. That's what the web database [HTML5 Test](www.caniuse.com) is for. There you can check the latest CSS and HTML features.
+
+ ![Preview](7_StylingWithCSS/images/Preview_8_5.JPG)
+
+
+
+
+
 
 
 
