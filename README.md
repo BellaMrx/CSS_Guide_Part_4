@@ -48,6 +48,7 @@ The code examples in the guide can be found in the listed folders.
     - 7.3. Tables with CSS
     - 7.4. Images and graphics with `width` and `height`
     - 7.5. Transfom elements
+    - 7.6. Style HTML forms with CSS
 8. Testing and organizing
 
 
@@ -922,7 +923,7 @@ When using `transform` the transition can be a bit unattractive, because the e.g
 - `transition-duration` : This specifies the duration of the transition in seconds e.g. `1s`.
 - `transition-timing-function` : This specification is a kind of temporal course of the transition. For example, `ease` means that the transition starts slowly, speeds up in the middle and ends slowly again. Other time courses are: `linear`, `ease-in`, `ease-out`, `ease-in-out`.
 
-Some demonstrations and examples of 'transition' can be found on this website [CSS Transitions](http://css3.bradshawenterprises.com/transitions/).
+Some demonstrations and examples of `transition` can be found on this website [CSS Transitions](http://css3.bradshawenterprises.com/transitions/).
 
 
 ### Transform other HTML elements
@@ -967,8 +968,136 @@ The transform functions are not limited to images or graphics, it is also possib
  ![Preview](7_StylingWithCSS/images/Preview_7_31.JPG)
 
 
+### 7.6. Style HTML forms with CSS
+CSS now offers many possibilities for designing forms. Despite the many possibilities should be aware that a form is real functional elements of a website, and when designing it should be careful to keep these elements recognizable as what it is (less is more). A form is usually used to submit entered data to the web server via a web browser.
 
+ example --> *7_StylingWithCSS/Part_29/index.html*
 
+   ```
+    ...
+    <h1>Contact form</h1>
+    <form id="myForm" method="post">
+        <fieldset>
+            <div>
+                <label for="name">Last name:</label>
+                <input type="text" name="name" id="name" placeholder="Your last name">
+            </div>
+            <div>
+                <label for="fname">First name:</label>
+                <input type="text" name="fname" id="fname" placeholder="Your first name">
+            </div>
+            <div>
+                <label for="mail">E-Mail:</label>
+                <input type="email" name="mail" id="mail" placeholder="Email address" required>
+                <label for="mail"></label>
+            </div>
+            <div>
+                <label for="born">Year of birth:</label>
+                <input type="number" name="born" id="born" min="1920" max="2023" value="1980">
+            </div>
+            <div class="form_radio">
+                <label>Sex:</label>
+                <input type="radio" name="sex" id="male" value="male" class="nobreak">
+                <label for="male" class="nobreak">Male</label>
+                <input type="radio" name="sex" id="female" value="female" class="nobreak">
+                <label for="female" class="nobreak">Female</label>
+            </div>
+            <div>
+                <label for="message">Your message:</label>
+                <textarea name="message" id="message" placeholder="Enter message here..." rows="8" required></textarea>
+                <label for="message"></label>
+            </div>
+            <div>
+                <input type="checkbox" name="reply" id="reply" value="reply" class="nobreak" required>
+                <label for="reply" class="nobreak">GDPR consent (<a href="#">Privacy policy</a>)</label>
+            </div>
+            <div>
+                <input name="submit" type="submit" value="Submit" class="nobreak">
+                <input name="Reset" type="reset" value="Reset" class="nobreak">
+            </div>
+            <p>(⨉) = Input required</p>
+        </fieldset>
+    </form>
+    ...
+   ```
+
+ example --> *7_StylingWithCSS/Part_29/styles/style.css*
+
+   ```
+    ...
+
+    /* Styling */
+
+    fieldset {
+        width: 90%;
+        padding-top: 1.5em;
+        padding-left: 1.5em;
+        background: #f0f0f0;
+    }
+
+    input:hover, textarea:hover {
+        background: #fffff0;
+        border: 2px solid #73e4d5;
+        box-shadow: 0 0 10px #00000033;
+    }
+
+    input[type="submit"]:hover, input[type="reset"]:hover {
+        background: #c9c9c9;
+        border: 2px solid #6c6c6c;
+    }
+
+    input[type="submit"]:active, input[type="reset"]:active {
+        background: #8f8f8f;
+    }
+
+    input:required+label::after {
+        color: red;
+        content: " ⨉";
+    }
+
+    textarea:required+label::after {
+        color: red;
+        content: " ⨉";
+    }
+
+    input[type='email']:valid+label::after {
+        color: green;
+        content: " ✓";
+    }
+
+    textarea:valid+label::after {
+        color: green;
+        content: " ✓";
+    }
+
+    input[type='checkbox']:valid+label::after {
+        color: green;
+        content: " ✓";
+    }
+
+    /* Single column wrap at 640 pixels */
+
+    @media screen and (max-width: 40em) {
+        label:not(.nobreak) {
+            display: block;
+        }
+        label {
+            padding-bottom: 0.4em;
+        }
+        input:not(.nobreak) {
+            display: block;
+        }
+        input[type="checkbox"],
+        input[type="submit"],
+        input[type="radio"] {
+            margin-left: 0;
+        }
+    }
+   ```
+
+ ![Preview](7_StylingWithCSS/images/Preview_7_32.JPG)
+
+The indication of the data protection regulation is mandatory in EU countries.
 
 
 
