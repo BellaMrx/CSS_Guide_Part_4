@@ -893,9 +893,78 @@ It is possible to combine several functions with each other. For this purpose, t
     ...
    ```
 
+
+### Transitions with CSS
+When using `transform` the transition can be a bit unattractive, because the e.g. the graphic is immediately scaled large and rotated. This abrupt transition can be softened with the CSS property `transition`.
+
+ example --> *7_StylingWithCSS/Part_27/styles/styleE.css*
+
+   ```
+    ...
+    img {
+        max-height: 100%;
+        min-width: 100%;
+        object-fit: cover;
+        vertical-align: bottom;
+        transition: all 1s ease;
+    }
+
+    img:hover {
+        transform: scale(1.25) rotate(10deg);
+        border: 4px white solid;
+        transition: all 1s ease;
+    }
+    ...
+   ```
+
+`transition` is a shorthand notation, from the following properties:
+`transition-property` : This specifies the property to animate during the transition. `all` specifies that all properties will be animated. There you can also use e.g. `background` to animate.
+`transition-duration` : This specifies the duration of the transition in seconds e.g. `1s`.
+`transition-timing-function` : This specification is a kind of temporal course of the transition. For example, `ease` means that the transition starts slowly, speeds up in the middle and ends slowly again. Other time courses are: `linear`, `ease-in`, `ease-out`, `ease-in-out`.
+
+Some demonstrations and examples of 'transition' can be found on this website [CSS Transitions](http://css3.bradshawenterprises.com/transitions/).
+
+
 ### Transform other HTML elements
+The transform functions are not limited to images or graphics, it is also possible to use them for other HTML elements.
 
+ example --> *7_StylingWithCSS/Part_28/index.html*
 
+   ```
+    ...
+    <article class="trans1">
+      <h1>Transform elements with CSS</h1>
+      <p>Lorem ipsum dolor ...</p>
+    </article>
+    ...
+   ```
+
+ example --> *7_StylingWithCSS/Part_28/styles/style.css*
+
+   ```
+    ...
+    .trans1  {
+        transform: skew(5deg, -4deg);
+        border: 0.5em solid blue;
+        font-family: Courier;
+    }
+
+    .trans2  {
+        transform: skew(-4deg, 3deg);
+        border: 0.5em solid green;
+        font-family: Times;
+        z-index: 1;
+    }
+
+    .trans3  {
+        transform: rotate(180deg) skew(4deg, -2deg);
+        border: 0.5em solid red;
+        font-family: Arial;
+    }
+
+   ```
+
+ ![Preview](7_StylingWithCSS/images/Preview_7_31.JPG)
 
 
 
