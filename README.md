@@ -9,7 +9,7 @@ The code examples in the guide can be found in the listed folders.
 -----------------------------------------------------------------------------------------
 
 ## Contents
-### [CSS Guide Part I]()
+### [CSS Guide Part I](https://github.com/BellaMrx/CSS_Guide)
 1. Introduction to CSS
     - 1.1. History of CSS 
     - 1.2. Principle of CSS application
@@ -22,7 +22,7 @@ The code examples in the guide can be found in the listed folders.
     - 3.1 The principle of inheritance in CSS
     - 3.2. Understanding the control system of the cascade
     - 3.3. Pass values to CSS properties
-### [CSS Guide Part II]()
+### [CSS Guide Part II](https://github.com/BellaMrx/CSS_Guide_Part_2)
 4. The box model of CSS 
     - 4.1. The classic box model
     - 4.2. The newer alternative box model of CSS
@@ -33,7 +33,7 @@ The code examples in the guide can be found in the listed folders.
     - 5.2. Stacking with `z-index`
     - 5.3. Floating boxes with `float`
     - 5.4. Flexible boxes (flexbox model)
-### [CSS Guide Part III]()
+### [CSS Guide Part III](https://github.com/BellaMrx/CSS_Guide_Part_3)
 6. Responsive layouts with CSS
     - 6.1. Theoretical basic knowledge about responsive web design
     - 6.2. Create a responsive layout
@@ -1199,22 +1199,32 @@ There are also development tools with which such an effort can be avoided e.g. [
 ------------------------------------------------------------------------------------------------
 
 # 9. Useful websites about CSS
+## Designing
+ * [Design Resources For Developers](https://github.com/bradtraversy/design-resources-for-developers)
+
+ * [HTML Color Codes](https://htmlcolorcodes.com/) 
+ * [Ultimate CSS Gradient Generator](https://www.colorzilla.com/gradient-editor/) 
+ * [Glassmorphism CSS](https://css.glass/)
+ * [Font Awesome](https://fontawesome.com/) 
+ * [HTML Symbols](https://www.htmlsymbols.xyz/) 
+ 
+## Learning
+ * [W3school](https://www.w3schools.com/)
+ * [freeCodeCamp](https://www.freecodecamp.org/) 
+ * [CSS-Tricks](https://css-tricks.com/)
+ * [Mmdn](https://developer.mozilla.org/en-US/) 
  * [Google](https://www.google.com/)
  * [GitHub](https://github.com/) 
- * 
- * 
 
 
 ------------------------------------------------------------------------------------------------
 
-This is the end of CSS Guide Part 4. 
-
-This guide is an overview that a web developer should know. There is much more to know about CSS and always new things to learn.
+This is the end of CSS Guide. This guide is an overview that a web developer should know. There is much more to know about CSS and always new things to learn.
 
 The other parts you can find here:
-- [CSS Guide Part I]().
-- [CSS Guide Part II]().
-- [CSS Guide Part III]().
+- [CSS Guide Part I](https://github.com/BellaMrx/CSS_Guide).
+- [CSS Guide Part II](https://github.com/BellaMrx/CSS_Guide_Part_2).
+- [CSS Guide Part III](https://github.com/BellaMrx/CSS_Guide_Part_3).
 
 On my Twitter account [@bella_mrx](https://twitter.com/bella_mrx) you can find more useful stuff about HTML and web development. 
 
