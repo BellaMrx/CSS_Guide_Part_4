@@ -88,8 +88,7 @@ Overview of generic fonts
 | cursive | this font is intended to give the impression of a cursive script | Comic Sans MS, Florence, Parkavenue, Monotype Corsiva |
 | fantasy | are often decorative ornamental fonts that can be used for creative purposes | Brushstroke, Impact, Haettenschweiler, Oldtown |
 
- example --> *7_StylingWithCSS/Part_1/styles/style.css*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/blob/main/7_StylingWithCSS/Part_1/styles/style.css) --> *7_StylingWithCSS/Part_1/styles/style.css*
    ```
     body {
         font-family: Arial, Verdana, Helvetica, sans-serif;
@@ -127,8 +126,7 @@ With `@font-face` it is possible to use fonts that are not installed on the user
 #### Embed license-free fonts from Google into the website
 The fonts from Google Fonts can be found at [Google Fonts](https://fonts.google.com/).
 
- example --> *7_StylingWithCSS/Part_2/styles/style.css*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/blob/main/7_StylingWithCSS/Part_2/styles/style.css) --> *7_StylingWithCSS/Part_2/styles/style.css*
    ```
     @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
     body {
@@ -181,7 +179,7 @@ For symbols with a trademark, the prefix `fab` must be used instead of `fas`. Th
 
 An overview of Font Awesome's symbols can be found at [Font Awesome - Gallery](https://fontawesome.com/icons?d=gallery). Other interesting information about Font Awesome can be found here [Font Awesome - How to use](https://fontawesome.com/how-to-use/web-fonts-with-css).
 
- example --> *7_StylingWithCSS/Part_3*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/tree/main/7_StylingWithCSS/Part_3) --> *7_StylingWithCSS/Part_3*
 
  ![Preview](7_StylingWithCSS/images/Preview_7_3.JPG)
 
@@ -204,8 +202,8 @@ CSS provides predefined font size keywords such as `small`, `x-small`, `xx-small
 #### Relative font sizes with `em`.
 An easy way to adjust the font size for the whole document is to set `font-size` for the *body* element. If `font-size: 1em;` (1em = 100%) is set, the default value of the web browser is used. 
 The fact that a relative font size of the *body* element controls the font size for the elements of the web page through inheritance, this option is popular in practice. But it is exactly this inheritance that can make adjusting font sizes a bit more complex if not taken care of.
- example --> *7_StylingWithCSS/Part_4/styles/styleA.css*
 
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/blob/main/7_StylingWithCSS/Part_4/styles/styleA.css) --> *7_StylingWithCSS/Part_4/styles/styleA.css*
    ```
     body {
         font-family: Arial, Verdana, Helvetica, sans-serif;
@@ -237,8 +235,8 @@ The fact that a relative font size of the *body* element controls the font size 
 
 #### Set font size with `rem`
 The problem with inheritance of relative values that have with font size with `em` no longer occurs with `rem` (=root em). Since it inherits to the highest root element `<html>` instead of the font size of the corresponding parent element.
- example --> *7_StylingWithCSS/Part_4/styles/styleB.css*
-
+ 
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/blob/main/7_StylingWithCSS/Part_4/styles/styleB.css) --> *7_StylingWithCSS/Part_4/styles/styleB.css*
    ```
     html { 
         font-size: 100%; 
@@ -277,8 +275,8 @@ The unit `pt` (point) is more suitable for printing, if a print version is creat
 #### the responsive units `vw` and `vh`
 The *viewport units* with `vw` (view width) and `vh` (view height), are relative to the screen dimensions. This assigns a size to an element, which is calculated in relation to the width and height of the viewport. `1vw` corresponds to 1% of the width of the viewport, exactly the same applies to `vh` (corresponds to 1% of the height of the viewport).
 Additionally there are the units `vmin` and `vmax`, which refer to the height or width and use the smaller or larger value.
- example --> *7_StylingWithCSS/Part_4/styles/styleD.css*
-
+ 
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/blob/main/7_StylingWithCSS/Part_4/styles/styleD.css) --> *7_StylingWithCSS/Part_4/styles/styleD.css*
    ```
     html { 
         font-size: calc(100% + 0.5vw); 
@@ -293,8 +291,7 @@ An italic font can be rendered with the CSS property `font-style` and the value 
 
 The CSS property `font-weight` can be used to define the thickness of the font. The `bold` value defines a bold font style. The default value is `normal`. Besides `bold` there are also the values `bolder` and `lighter`, as well as the numeric values `100`, `200` to `900` (in steps of 100). `400` stands for `normal` and `700` for `bold`.
 
- example --> *7_StylingWithCSS/Part_5/styles/style.css*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/blob/main/7_StylingWithCSS/Part_5/styles/style.css) --> *7_StylingWithCSS/Part_5/styles/style.css*
    ```
     .italic {
         font-style: italic;
@@ -323,8 +320,7 @@ The CSS property `font-weight` can be used to define the thickness of the font. 
 ### Create small caps with `font-variant`
 With `font-variant` and the value `small-caps` the text will be converted to all uppercase, keeping the size of the lowercase letters.
 
- example --> *7_StylingWithCSS/Part_6/styles/style.css*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/blob/main/7_StylingWithCSS/Part_6/styles/style.css) --> *7_StylingWithCSS/Part_6/styles/style.css*
    ```
     .cap  { 
         font-variant:small-caps; 
@@ -341,8 +337,7 @@ With `font-variant` and the value `small-caps` the text will be converted to all
 ### Line spacing with `line-height`
 The line spacing defines the distance from baseline to baseline and can be set with the CSS property `line-height`. The line spacing is important for the readability of longer text passages.
 
- example --> *7_StylingWithCSS/Part_7/styles/style.css*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/blob/main/7_StylingWithCSS/Part_7/styles/style.css) --> *7_StylingWithCSS/Part_7/styles/style.css*
    ```
     .p-75 { 
         line-height: 75%; 
@@ -374,8 +369,7 @@ The CSS property `font` is a shorthand notation for the properties in that order
 If the spacing between the individual letters is to be changed, this can be done with the CSS property `letter-spacing`. This is not suitable for normal continuous text, because it can worsen the readability. It makes more sense for headlines or texts with capital letters only.
 With `word-spacing` you can control the spacing between words. By default the spacing is `0.25em`, but this also depends on the web browser.
 
- example --> *7_StylingWithCSS/Part_8/styles/style.css*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/blob/main/7_StylingWithCSS/Part_8/styles/style.css) --> *7_StylingWithCSS/Part_8/styles/style.css*
    ```
     .letterspace { 
         letter-spacing: 0.2em; 
@@ -396,8 +390,7 @@ Important for a good reading flow of texts is the alignment, which can be contro
 `center` : This will center the text, this is good for headings, poems or short texts.
 `justify` : This aligns the text in justified text, where the individual lines are of equal width and flush left and right.
 
- example --> *7_StylingWithCSS/Part_9/styles/style.css*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/blob/main/7_StylingWithCSS/Part_9/styles/style.css) --> *7_StylingWithCSS/Part_9/styles/style.css*
    ```
     .left { 
         text-align: left; 
@@ -422,8 +415,7 @@ Important for a good reading flow of texts is the alignment, which can be contro
 ### Vertical alignment with `vertical-align`
 The CSS property `vertical-align` is used for vertical alignment of inline elements and is not suitable for block elements.
 
- example --> *7_StylingWithCSS/Part_10/styles/style.css*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/blob/main/7_StylingWithCSS/Part_10/styles/style.css) --> *7_StylingWithCSS/Part_10/styles/style.css*
    ```
     .vtop {
         vertical-align: top;
@@ -456,8 +448,7 @@ The CSS property `vertical-align` is used for vertical alignment of inline eleme
 ### Indent text with `text-indent`
 With the CSS property `text-indent` the first line of text can be indented with a positive value or pulled out with a negative value to maintain the reading flow. This is usually used for books and magazines, but not so much for web pages. 
 
- example --> *7_StylingWithCSS/Part_11/styles/style.css*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/blob/main/7_StylingWithCSS/Part_11/styles/style.css) --> *7_StylingWithCSS/Part_11/styles/style.css*
    ```
     .p-ident {  
         font-size: 1em;
@@ -470,8 +461,7 @@ With the CSS property `text-indent` the first line of text can be indented with 
 
 ### Underline and line-through text with `text-decoration`
 
- example --> *7_StylingWithCSS/Part_12/styles/style.css*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/blob/main/7_StylingWithCSS/Part_12/styles/style.css) --> *7_StylingWithCSS/Part_12/styles/style.css*
    ```
     .underline { text-decoration: underline; }
 
@@ -486,8 +476,7 @@ With the CSS property `text-indent` the first line of text can be indented with 
 ### Case sensitive text with `text-transform`
 With the CSS property `text-transform` and the value `uppercase` the text is displayed in upper case and with `lowercase` in lower case. With `capitalize` only the first letter is displayed as uppercase.
 
- example --> *7_StylingWithCSS/Part_13/styles/style.css*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/blob/main/7_StylingWithCSS/Part_13/styles/style.css) --> *7_StylingWithCSS/Part_13/styles/style.css*
    ```
     .uppercase { text-transform: uppercase; }
 
@@ -506,8 +495,7 @@ With the CSS property `text-transform` and the value `uppercase` the text is dis
                  gray;  /* Shadow color */
    ```
 
- example --> *7_StylingWithCSS/Part_14/styles/style.css*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/blob/main/7_StylingWithCSS/Part_14/styles/style.css) --> *7_StylingWithCSS/Part_14/styles/style.css*
    ```
     .shadow-one { 
         text-shadow: 3px 3px 5px gray; 
@@ -532,8 +520,7 @@ With the CSS property `text-transform` and the value `uppercase` the text is dis
 ### Split text with `column-count` into several columns
 With the CSS property `column-count` it is possible to split a text automatically into a multi-column set. Is very useful for wide screens, and increases the readability of the text. With `column-gap` the gap between the columns is controlled.
 
- example --> *7_StylingWithCSS/Part_15/styles/style.css*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/blob/main/7_StylingWithCSS/Part_15/styles/style.css) --> *7_StylingWithCSS/Part_15/styles/style.css*
    ```
     .column {
         column-count: 2;
@@ -551,6 +538,7 @@ Instead of `column-count` also `column-width` can be used. This will automatical
         /*columns: 20em 2;*/
         columns-width: 250px;
         column-gap: 1.5rem;
+    }
    ```
 
 
@@ -572,8 +560,7 @@ For ordered lists with `<ol>` the following values are available:
 - `lower-roman` : numbering like i., ii., iii., iv. ...
 - `upper-roman` : numbering like I., II., III., IV. ...
 
- example --> *7_StylingWithCSS/Part_16/styles/style.css*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/blob/main/7_StylingWithCSS/Part_16/styles/style.css) --> *7_StylingWithCSS/Part_16/styles/style.css*
    ```
     ul { list-style-type: square; }
 
@@ -586,8 +573,7 @@ For ordered lists with `<ol>` the following values are available:
 ### Images as bullets with `list-style-image`
 With the CSS property `list-style-image` an image can be used as a bullet.
 
- example --> *7_StylingWithCSS/Part_17/styles/style.css*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/blob/main/7_StylingWithCSS/Part_17/styles/style.css) --> *7_StylingWithCSS/Part_17/styles/style.css*
    ```
     ul { list-style-image: url("../images/star.png"); }
    ```
@@ -597,8 +583,7 @@ With the CSS property `list-style-image` an image can be used as a bullet.
 
 Instead of an image, a special character can also be used. For this purpose `list-style-type` is set to `none`. And using `li:before` and `content` a special character is used as list symbols.
  
- example --> *7_StylingWithCSS/Part_18/styles/style.css*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/blob/main/7_StylingWithCSS/Part_18/styles/style.css) --> *7_StylingWithCSS/Part_18/styles/style.css*
    ```
     .specialul { 
         list-style-type: none;
@@ -618,8 +603,7 @@ You can find this special character here [HTML Symbols - U2023](https://www.html
 ### Position bulleted list with `list-style-position`
 With the CSS property `list-style-position` the bullet point can be positioned inside or outside. The default behavior is set with the value `outside`, so the bullet point is located to the left of the text block. With the value `inside` the bullet point is inside the text block. 
  
- example --> *7_StylingWithCSS/Part_19/styles/style.css*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/blob/main/7_StylingWithCSS/Part_19/styles/style.css) --> *7_StylingWithCSS/Part_19/styles/style.css*
    ```
     .out { list-style-position: outside; }
 
@@ -632,7 +616,7 @@ With the CSS property `list-style-position` the bullet point can be positioned i
 ### Create navigation and menus with lists
 The expandable menu for the mobile version was created here with *jQuery*. This is also possible with JavaScript.
  
- example --> *7_StylingWithCSS/Part_20*
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/tree/main/7_StylingWithCSS/Part_20) --> *7_StylingWithCSS/Part_20*
 
 Desktop-Version
 
@@ -646,8 +630,7 @@ Mobile-Version
 
 ## 7.3. Tables with CSS
 
- example --> *7_StylingWithCSS/Part_21/styles/style.css*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/blob/main/7_StylingWithCSS/Part_21/styles/style.css) --> *7_StylingWithCSS/Part_21/styles/style.css*
    ```
     table {
         width: 700px;
@@ -682,9 +665,7 @@ Mobile-Version
 ### Collapsing borders for table cells with `border-collapse`
 The CSS property `border-collapse` can be used to specify whether the borders of the individual cells are displayed separately (`border-collapse: seperate;`) or collapsed (`border-collapse: collapse;`).
 
- example --> *7_StylingWithCSS/Part_22*
-
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/tree/main/7_StylingWithCSS/Part_22) --> *7_StylingWithCSS/Part_22*
    ```
     ...
     table {
@@ -700,8 +681,7 @@ The CSS property `border-collapse` can be used to specify whether the borders of
 
 ### Spacing between cells with `border-spacing`
 
- example --> *7_StylingWithCSS/Part_23*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/tree/main/7_StylingWithCSS/Part_23) --> *7_StylingWithCSS/Part_23*
    ```
     ...
     table {
@@ -720,8 +700,7 @@ This sets the position of the table caption. Usually it is positioned above the 
 
 With `empty-cells: hide;` the frame can be hidden if there is no content. The default value would be `empty-cells: show;`, then the frame is displayed without any content.
 
- example --> *7_StylingWithCSS/Part_24*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/tree/main/7_StylingWithCSS/Part_24) --> *7_StylingWithCSS/Part_24*
    ```
     ...
     table {
@@ -743,8 +722,7 @@ With `empty-cells: hide;` the frame can be hidden if there is no content. The de
 ## 7.4. Images and graphics with `width` and `height`
 The size of the images can be set with the CSS properties `width` and `height`. It is possible to display one and the same image in different sizes. If each `<img>`- tag is assigned a class, it is ralatively easy to display them in different sizes.
 
- example --> *7_StylingWithCSS/Part_25/styles/style.css*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/blob/main/7_StylingWithCSS/Part_25/styles/style.css) --> *7_StylingWithCSS/Part_25/styles/style.css*
    ```
     .large {
         width: 225px;
@@ -767,8 +745,7 @@ The size of the images can be set with the CSS properties `width` and `height`. 
 
 Thus, it is also possible to position the images easily. By adding to the classes, more.
 
- example --> *7_StylingWithCSS/Part_26*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/tree/main/7_StylingWithCSS/Part_26) --> *7_StylingWithCSS/Part_26*
    ```
     ...
     <p>
@@ -801,8 +778,7 @@ With the help of the CSS property `transform` it is possible to change the posit
 
 ### `transform: scale();`
 
- example --> *7_StylingWithCSS/Part_27/index.html*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/blob/main/7_StylingWithCSS/Part_27/index.html) --> *7_StylingWithCSS/Part_27/index.html*
    ```
     ...
     <ul>
@@ -817,8 +793,7 @@ With the help of the CSS property `transform` it is possible to change the posit
     ...
    ```
 
- example --> *7_StylingWithCSS/Part_27/styles/styleA.css*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/blob/main/7_StylingWithCSS/Part_27/styles/styleA.css) --> *7_StylingWithCSS/Part_27/styles/styleA.css*
    ```
     ...
     img:hover {
@@ -836,8 +811,7 @@ In this example with `scale(1.25)`, the images are enlarged by a factor of 1.25 
 ### `transform: rotate();`
 With `rotate()` the element is rotated by a specified number of degrees. With `transform: rotate(15deg);` the element is rotated by 15 degrees, clockwise. A negative value rotates the element counterclockwise.
 
- example --> *7_StylingWithCSS/Part_27/styles/styleB.css*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/blob/main/7_StylingWithCSS/Part_27/styles/styleB.css) --> *7_StylingWithCSS/Part_27/styles/styleB.css*
    ```
     ...
     img:hover {
@@ -853,8 +827,7 @@ With `rotate()` the element is rotated by a specified number of degrees. With `t
 ### `transform: skew();`
 The `skew()` function can be used to tilt an HTML element around the x and y axis. Here two values are given in degrees. The first value gives the tilt around the x-axis and the second gives the tilt around the y-axis.
 
- example --> *7_StylingWithCSS/Part_27/styles/styleC.css*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/blob/main/7_StylingWithCSS/Part_27/styles/styleC.css) --> *7_StylingWithCSS/Part_27/styles/styleC.css*
    ```
     ...
     img:hover {
@@ -872,8 +845,7 @@ If an HTML element should only be tilted around the x or y axis, this can be don
 ### `transform: translate();`
 With the function `translate()` HTML elements can be moved. Here also two values are needed to want to move the element along the x- and y-axis.
 
- example --> *7_StylingWithCSS/Part_27/styles/styleD.css*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/blob/main/7_StylingWithCSS/Part_27/styles/styleD.css) --> *7_StylingWithCSS/Part_27/styles/styleD.css*
    ```
     ...
     img:hover {
@@ -901,8 +873,7 @@ It is possible to combine several functions with each other. For this purpose, t
 ### Transitions with CSS
 When using `transform` the transition can be a bit unattractive, because the e.g. the graphic is immediately scaled large and rotated. This abrupt transition can be softened with the CSS property `transition`.
 
- example --> *7_StylingWithCSS/Part_27/styles/styleE.css*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/blob/main/7_StylingWithCSS/Part_27/styles/styleE.css) --> *7_StylingWithCSS/Part_27/styles/styleE.css*
    ```
     ...
     img {
@@ -932,8 +903,7 @@ Some demonstrations and examples of `transition` can be found on this website [C
 ### Transform other HTML elements
 The transform functions are not limited to images or graphics, it is also possible to use them for other HTML elements.
 
- example --> *7_StylingWithCSS/Part_28/index.html*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/blob/main/7_StylingWithCSS/Part_28/index.html) --> *7_StylingWithCSS/Part_28/index.html*
    ```
     ...
     <article class="trans1">
@@ -943,8 +913,7 @@ The transform functions are not limited to images or graphics, it is also possib
     ...
    ```
 
- example --> *7_StylingWithCSS/Part_28/styles/style.css*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/blob/main/7_StylingWithCSS/Part_28/styles/style.css) --> *7_StylingWithCSS/Part_28/styles/style.css*
    ```
     ...
     .trans1  {
@@ -974,8 +943,7 @@ The transform functions are not limited to images or graphics, it is also possib
 ### 7.6. Style HTML forms with CSS
 CSS now offers many possibilities for designing forms. Despite the many possibilities should be aware that a form is real functional elements of a website, and when designing it should be careful to keep these elements recognizable as what it is (less is more). A form is usually used to submit entered data to the web server via a web browser.
 
- example --> *7_StylingWithCSS/Part_29/index.html*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/blob/main/7_StylingWithCSS/Part_29/index.html) --> *7_StylingWithCSS/Part_29/index.html*
    ```
     ...
     <h1>Contact form</h1>
@@ -1024,8 +992,7 @@ CSS now offers many possibilities for designing forms. Despite the many possibil
     ...
    ```
 
- example --> *7_StylingWithCSS/Part_29/styles/style.css*
-
+ [Complete Code](https://github.com/BellaMrx/CSS_Guide_Part_4/blob/main/7_StylingWithCSS/Part_29/styles/style.css) --> *7_StylingWithCSS/Part_29/styles/style.css*
    ```
     ...
 
