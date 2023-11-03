@@ -110,6 +110,7 @@ Overview of generic fonts
 
 
 Analyze font in web browser
+
  ![Preview](7_StylingWithCSS/images/WebbrowserFonts.PNG)
 
 
