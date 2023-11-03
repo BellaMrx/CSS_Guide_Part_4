@@ -1106,7 +1106,7 @@ To check what the web browser can do regarding HTML, it is possible to test here
 
 
 ### Use it or not?
-It is not easy to keep track of the different web technologies and what can be used with which web browser. That's what the web database [HTML5 Test](www.caniuse.com) is for. There you can check the latest CSS and HTML features.
+It is not easy to keep track of the different web technologies and what can be used with which web browser. That's what the web database [Can I Use](https://caniuse.com/) is for. There you can check the latest CSS and HTML features.
 
  ![Preview](7_StylingWithCSS/images/Preview_8_5.JPG)
 
